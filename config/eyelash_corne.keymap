@@ -54,7 +54,7 @@
         compatible = "zmk,combos";
 
         KBsyslayer {
-            bindings = <&none>;
+            bindings = <&mo 4>;
             key-positions = <45 46 47>;
             layers = <4>;
         };
@@ -102,10 +102,10 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&studio_unlock  &kp F1  &kp F2     &kp F3     &kp F4     &kp F5                         &to 1         &kp F6  &kp F7     &kp F8     &kp F9     &kp F10          &kp F11
-&none           &none   &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4                &to 0  &to 5  &to 2  &none   &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp PRINTSCREEN  &kp F12
-&none           &none   &none      &none      &none      &mkp MB5  &kp C_MUTE           &to 3         &none   &none      &none      &none      &kp SCROLLLOCK   &kp PAUSE_BREAK
-                                   &none      &none      &none                                        &none   &none      &none
+&studio_unlock  &kp F1  &kp F2     &kp F3     &kp F4     &kp F5                         &none         &kp F6  &kp F7     &kp F8     &kp F9     &kp F10          &kp F11
+&none           &none   &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4                &none  &to 5  &none  &none   &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp PRINTSCREEN  &kp F12
+&none           &none   &none      &none      &none      &mkp MB5  &kp C_MUTE           &none         &none   &none      &none      &none      &kp SCROLLLOCK   &kp PAUSE_BREAK
+                                   &none      &none      &none                                        &mo 3   &none      &none
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -123,7 +123,7 @@
         Games {
             bindings = <
 &none  &none  &none  &none  &none  &none                  &none         &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none           &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none           &none  &to 0  &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none  &none           &none         &none  &none  &none  &none  &none  &none
                      &none  &none  &none                                &none  &none  &none
             >;
