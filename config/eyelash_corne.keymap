@@ -33,6 +33,8 @@
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+
+            label = "LShift/Caps";
         };
     };
 
@@ -56,7 +58,7 @@
         KBsyslayer {
             bindings = <&mo 4>;
             key-positions = <45 46 47>;
-            layers = <4>;
+            timeout-ms = <50>;
         };
     };
 
@@ -66,10 +68,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T                                &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td0       &kp A  &kp S  &kp D     &kp F  &kp G                      &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp C_MUTE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1  &lt 3 ENTER                                                &lt 3 SPACE  &mo 2  &kp RALT
+&kp TAB    &kp Q  &kp W  &kp E  &kp R  &kp T                                &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D  &kp F  &kp G                      &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LGUI   &kp Z  &kp X  &kp C  &kp V  &kp B        &kp C_MUTE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                         &mo 1  &td0   &lt 3 ENTER                                                &lt 3 SPACE  &mo 2  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -78,10 +80,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&none  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                &mmv MOVE_UP                     &kp N6    &kp N7    &kp N8  &kp N9     &kp N0    &kp BSPC
-&none  &none   &none   &none   &none   &none                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &kp PG_UP
-&none  &none   &none   &none   &none   &none   &kp C_MUTE                    &mmv MOVE_DOWN                   &none     &none     &none   &none      &kp END   &kp PG_DN
-                       &none   &none   &none                                                                  &kp INS   &kp DEL   &none
+&none           &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                &mmv MOVE_UP                     &kp N6     &kp N7        &kp N8          &kp N9         &kp N0  &kp BSPC
+&kp LEFT_SHIFT  &none   &none   &none   &none   &none                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp HOME   &kp UP_ARROW  &kp LEFT_ARROW  &kp PAGE_UP    &none   &none
+&none           &none   &none   &none   &none   &none   &kp C_MUTE                    &mmv MOVE_DOWN                   &kp END    &kp DOWN      &kp RIGHT       &kp PAGE_DOWN  &none   &none
+                                &none   &trans  &none                                                                  &kp LCTRL  &kp DEL       &none
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -103,9 +105,9 @@
             display-name = "Fn";
             bindings = <
 &studio_unlock  &kp F1  &kp F2     &kp F3     &kp F4     &kp F5                         &none         &kp F6  &kp F7     &kp F8     &kp F9     &kp F10          &kp F11
-&none           &none   &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4                &none  &to 5  &none  &none   &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp PRINTSCREEN  &kp F12
+&none           &kp F6  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4                &none  &to 5  &none  &none   &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp PRINTSCREEN  &kp F12
 &none           &none   &none      &none      &none      &mkp MB5  &kp C_MUTE           &none         &none   &none      &none      &none      &kp SCROLLLOCK   &kp PAUSE_BREAK
-                                   &none      &none      &none                                        &mo 3   &none      &none
+                                   &none      &none      &none                                        &none   &none      &none
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -113,10 +115,10 @@
 
         KBsys {
             bindings = <
-&bootloader  &sys_reset    &none         &none         &none         &none                                        &rgb_ug RGB_BRI         &none  &none  &none  &none  &sys_reset  &bootloader
-&none        &none         &none         &none         &none         &none                       &rgb_ug RGB_EFF  &rgb_ug RGB_TOG  &none  &none  &none  &none  &none  &none       &none
-&none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR                     &rgb_ug RGB_BRD         &none  &none  &none  &none  &none       &none
-                                         &none         &none         &none                                                                &none  &none  &none
+&bootloader  &sys_reset    &studio_unlock  &none         &none         &none                                        &rgb_ug RGB_BRI         &none  &none  &none  &none  &sys_reset  &bootloader
+&none        &none         &none           &none         &none         &none                       &rgb_ug RGB_EFF  &rgb_ug RGB_TOG  &none  &none  &none  &none  &none  &none       &none
+&none        &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR                     &rgb_ug RGB_BRD         &none  &none  &none  &none  &none       &none
+                                           &none         &none         &none                                                                &none  &none  &none
             >;
         };
 
