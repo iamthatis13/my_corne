@@ -71,7 +71,7 @@
 &kp TAB    &kp Q  &kp W  &kp E  &kp R  &kp T                                &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &kp LCTRL  &kp A  &kp S  &kp D  &kp F  &kp G                      &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LGUI   &kp Z  &kp X  &kp C  &kp V  &kp B        &kp C_MUTE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &mo 1  &td0   &lt 3 ENTER                                                &lt 3 SPACE  &mo 2  &kp RALT
+                         &mo 2  &td0   &lt 3 ENTER                                                &lt 3 SPACE  &mo 1  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -80,10 +80,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&none           &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                &mmv MOVE_UP                     &kp N6     &kp N7        &kp N8          &kp N9         &kp N0  &kp BSPC
-&kp LEFT_SHIFT  &none   &none   &none   &none   &none                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp HOME   &kp UP_ARROW  &kp LEFT_ARROW  &kp PAGE_UP    &none   &none
-&none           &none   &none   &none   &none   &none   &kp C_MUTE                    &mmv MOVE_DOWN                   &kp END    &kp DOWN      &kp RIGHT       &kp PAGE_DOWN  &none   &none
-                                &none   &trans  &none                                                                  &kp LCTRL  &kp DEL       &none
+&none   &kp N1  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp N5                                   &mmv MOVE_UP                     &kp N6    &kp N7        &kp N8          &kp N9         &kp N0  &kp BSPC
+&trans  &none   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp HOME  &kp UP_ARROW  &kp LEFT_ARROW  &kp PAGE_UP    &none   &none
+&none   &none   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none      &kp C_MUTE                    &mmv MOVE_DOWN                   &kp END   &kp DOWN      &kp RIGHT       &kp PAGE_DOWN  &none   &none
+                              &kp NUMBER_0  &trans        &kp ENTER                                                                 &none     &trans        &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
