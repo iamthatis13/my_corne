@@ -86,7 +86,7 @@
 &kp F1  &kp F2  &kp F3         &kp F4        &kp F5          &kp F6                         &none         &kp F7     &kp F8     &kp F9    &kp F10   &kp F11   &kp F12
 &none   &none   &kp LG(LS(S))  &none         &none           &none                   &none  &to 0  &none  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &none
 &none   &none   &none          &none         &none           &none          &none           &none         &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE  &none
-                               &kp LEFT_ALT  &kp LEFT_SHIFT  &kp BACKSPACE                                &mo 2      &none      &none
+                               &kp LEFT_ALT  &kp LEFT_SHIFT  &kp BACKSPACE                                &mo 2      &mo 4      &none
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -108,7 +108,7 @@
 &none      &none      &kp LA(TAB)  &kp LC(X)  &kp LC(LS(V))  &kp DELETE                  &none         &kp HOME   &kp N7  &kp N8  &kp N9  &none  &kp BACKSPACE
 &kp LC(Z)  &kp LC(Y)  &kp TAB      &kp LC(C)  &kp LC(V)      &kp SPACE            &none  &to 0  &none  &kp RIGHT  &kp N4  &kp N5  &kp N6  &none  &none
 &kp LG(V)  &kp N1     &kp N2       &kp N8     &kp N9         &kp BSPC    &none           &none         &none      &kp N1  &kp N2  &kp N3  &none  &none
-                                   &mo 3      &mkp LCLK      &kp RETURN                                &kp ENTER  &mo 4   &none
+                                   &mo 3      &mkp LCLK      &kp RETURN                                &mo 2      &mo 4   &none
             >;
 
             label = "Macro";
