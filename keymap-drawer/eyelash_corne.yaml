@@ -145,7 +145,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: Func/Brace, type: held}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Macro
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   NAV:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -242,7 +242,7 @@ layers:
   - NAV
   - $$mdi:mouse-left-click-outline$$
   - RETURN
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: Func/Brace, type: held alternate}
   - {t: Macro, type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   System:
