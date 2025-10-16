@@ -20,7 +20,7 @@ layers:
   - D
   - F
   - G
-  - {t: System, h: toggle}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: QWERTY, h: toggle}
   - {t: NAV, h: toggle}
   - H
@@ -92,12 +92,12 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: Num/Sym, type: held}
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
   Func/Brace:
   - F1
   - F2
