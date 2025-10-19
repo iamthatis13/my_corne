@@ -59,10 +59,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E        &kp R           &kp T                                &tog 6          &kp Y  &kp U        &kp I          &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D        &kp F           &kp G                         &none  &to 0   &tog 3  &kp H  &kp J        &kp K          &kp L    &kp SEMI  &kp SQT
-&td0       &kp Z  &kp X  &kp C        &kp V           &kp B           &kp C_MUTE           &tog 4          &kp N  &kp M        &kp COMMA      &kp DOT  &kp FSLH  &kp ESC
-                         &lt 3 ENTER  &kp LEFT_SHIFT  &lt 1 LEFT_WIN                                       &mo 2  &lt 4 SPACE  &kp RIGHT_ALT
+&kp TAB    &kp Q  &kp W  &kp E           &kp R           &kp T                           &tog 6          &kp Y        &kp U          &kp I      &kp O    &kp P     &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D           &kp F           &kp G                    &none  &to 0   &tog 3  &kp H        &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
+&td0       &kp Z  &kp X  &kp C           &kp V           &kp B      &kp C_MUTE           &tog 4          &kp N        &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                         &lt 3 LEFT_WIN  &kp LEFT_SHIFT  &lt 1 RET                                       &lt 2 SPACE  &kp RIGHT_ALT  &lt 4 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -71,10 +71,10 @@
         lower_layer {
             display-name = "Num/Sym";
             bindings = <
-&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PERCENT                       &none         &kp CARET      &kp AMPERSAND  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL
-&kp GRAVE  &kp N1           &kp N2       &kp N3     &kp N4      &kp N5                     &none  &to 0  &none  &kp N6         &kp N7         &kp N8         &kp N9                &kp N0                 &kp COLON
-&none      &none            &none        &none      &none       &none        &kp C_MUTE           &none         &kp MINUS      &kp PLUS       &kp COMMA      &kp DOT               &kp FSLH               &none
-                                         &none      &none       &mo 1                                           &kp BACKSPACE  &kp DEL        &sk RIGHT_ALT
+&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PERCENT                       &none         &kp CARET  &kp AMPERSAND  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSPACE
+&kp GRAVE  &kp N1           &kp N2       &kp N3     &kp N4      &kp N5                     &none  &to 0  &none  &kp N6     &kp N7         &kp N8         &kp N9                &kp N0                 &kp COLON
+&none      &none            &none        &none      &none       &none        &kp C_MUTE           &none         &kp MINUS  &kp PLUS       &kp COMMA      &kp DOT               &kp FSLH               &kp EQUAL
+                                         &none      &none       &mo 1                                           &none      &none          &sk RIGHT_ALT
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -83,10 +83,10 @@
         raise_layer {
             display-name = "Func/Brace";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4        &kp F5          &kp F6                         &none         &kp F7     &kp F8     &kp F9    &kp F10   &kp F11   &kp F12
-&none   &none   &none   &none         &none           &none                   &none  &to 0  &none  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &none
-&none   &none   &none   &none         &none           &none          &none           &none         &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE  &kp DELETE
-                        &kp LEFT_ALT  &kp LEFT_SHIFT  &kp BACKSPACE                                &mo 2      &mo 4      &none
+&kp F1  &kp F2  &kp F3  &kp F4        &kp F5          &kp F6                  &none         &kp F7     &kp F8     &kp F9    &kp F10   &kp F11   &kp BACKSPACE
+&none   &none   &none   &none         &none           &none            &none  &to 0  &none  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &kp F12
+&none   &none   &none   &none         &none           &none   &none           &none         &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE  &kp DELETE
+                        &sk LEFT_ALT  &kp LEFT_SHIFT  &none                                 &mo 2      &mo 4      &none
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -94,10 +94,10 @@
 
         Navigation {
             bindings = <
-&kp LA(TAB)  &none  &none  &none  &none  &none                  &none         &kp HOME        &kp PAGE_UP    &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK  &kp LC(LA(DELETE))
-&kp LCTRL    &none  &none  &none  &none  &none           &none  &to 0  &none  &kp LEFT_ARROW  &kp DOWN       &kp UP           &kp RIGHT       &none            &none
-&kp LG(L)    &none  &none  &none  &none  &none  &none           &none         &kp END         &kp PAGE_DOWN  &none            &none           &none            &kp LC(LA(ESC))
-                           &mo 3  &none  &none                                &kp RSHIFT      &none          &none
+&kp LA(TAB)     &none               &none  &none  &none  &none                  &none         &kp HOME        &kp PAGE_UP    &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK  &kp LC(LA(DELETE))
+&kp LCTRL       &kp LC(LEFT_SHIFT)  &none  &none  &none  &none           &none  &to 0  &none  &kp LEFT_ARROW  &kp DOWN       &kp UP           &kp RIGHT       &none            &none
+&kp LEFT_SHIFT  &none               &none  &none  &none  &none  &none           &none         &kp END         &kp PAGE_DOWN  &none            &none           &none            &kp LC(LS(ESC))
+                                           &mo 3  &none  &none                                &kp RSHIFT      &none          &none
             >;
 
             label = "NAV";
@@ -116,10 +116,10 @@
 
         System {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                  &none         &soft_off  &none  &none  &none  &none  &sys_reset
-&none         &none         &none         &none         &none         &none           &none  &to 0  &none  &none      &none  &none  &none  &none  &none
-&none         &none         &none         &none         &none         &none  &none           &none         &none      &none  &none  &none  &none  &bt BT_CLR
-                                          &none         &none         &none                                &mo 2      &mo 4  &none
+&none      &none  &none  &none  &none  &none                  &none              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
+&none      &none  &none  &none  &none  &none           &none  &to 0       &none  &none         &none         &none         &none         &none         &none
+&kp LG(L)  &none  &none  &none  &none  &none  &none           &bt BT_CLR         &soft_off     &none         &none         &none         &none         &sys_reset
+                         &none  &none  &none                                     &mo 2         &mo 4         &none
             >;
 
             label = "System";
