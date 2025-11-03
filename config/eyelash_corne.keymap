@@ -83,10 +83,10 @@
         raise_layer {
             display-name = "Func/Brace";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4        &kp F5          &kp F6                   &none         &kp F7     &kp F8     &kp F9      &kp F10   &kp F11   &kp BACKSPACE
-&none   &none   &none   &none         &none           &none             &none  &to 0  &none  &kp MINUS  &kp EQUAL  &kp LBKT    &kp RBKT  &kp BSLH  &kp F12
-&none   &none   &none   &none         &none           &none   &trans           &none         &kp UNDER  &kp PLUS   &kp LBRC    &kp RBRC  &kp PIPE  &none
-                        &sk LEFT_ALT  &kp LEFT_SHIFT  &none                                  &mo 2      &mo 4      &kp DELETE
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5          &kp F6                         &none         &kp F7     &kp F8     &kp F9      &kp F10   &kp F11   &kp BACKSPACE
+&none   &none   &none   &none   &none           &none                   &none  &to 0  &none  &kp MINUS  &kp EQUAL  &kp LBKT    &kp RBKT  &kp BSLH  &kp F12
+&none   &none   &none   &none   &none           &none         &trans           &none         &kp UNDER  &kp PLUS   &kp LBRC    &kp RBRC  &kp PIPE  &none
+                        &none   &kp LEFT_SHIFT  &kp LEFT_ALT                                 &mo 2      &mo 4      &kp DELETE
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -128,24 +128,26 @@
 
         Game {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E  &kp R  &kp T                  &none         &kp Y  &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp RCTRL  &kp A  &kp S  &kp D  &kp F  &kp G           &none  &to 0  &none  &kp H  &kp J  &kp K      &kp L    &kp SEMI  &kp RET
-&td0       &kp Z  &kp X  &kp C  &kp V  &kp B  &none           &none         &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
-                         &none  &none  &none                                &none  &none  &none
+&kp TAB    &kp Q  &kp W  &kp E  &kp R  &kp T                       &none         &kp Y  &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp RCTRL  &kp A  &kp S  &kp D  &kp F  &kp G                &none  &to 0  &none  &kp H  &kp J  &kp K      &kp L    &kp SEMI  &kp RET
+&td0       &kp Z  &kp X  &kp C  &kp V  &kp B  &kp C_MUTE           &none         &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
+                         &none  &none  &none                                     &none  &none  &none
             >;
 
             label = "Game";
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         Read {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans                      &trans          &trans          &trans        &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &to 0               &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &kp LG(DOWN_ARROW)          &trans          &trans          &trans        &trans           &trans  &trans
-                        &trans  &trans  &trans                                                &kp ENTER       &kp SPACE       &trans
+&trans  &trans  &trans  &trans  &trans  &trans                        &trans                      &trans          &trans          &trans        &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                &trans  &to 0               &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp C_MUTE            &kp LG(DOWN_ARROW)          &trans          &trans          &trans        &trans           &trans  &trans
+                        &trans  &trans  &trans                                                    &kp ENTER       &kp SPACE       &trans
             >;
 
             label = "Read";
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
     };
 
