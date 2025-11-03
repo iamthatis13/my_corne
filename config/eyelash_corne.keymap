@@ -59,10 +59,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E           &kp R           &kp T                           &tog 6          &kp Y        &kp U          &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D           &kp F           &kp G                    &none  &to 0   &tog 3  &kp H        &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
-&td0       &kp Z  &kp X  &kp C           &kp V           &kp B      &kp C_MUTE           &tog 4          &kp N        &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &lt 3 LEFT_WIN  &kp LEFT_SHIFT  &lt 1 RET                                       &lt 2 SPACE  &kp RIGHT_ALT  &lt 4 DEL
+&kp TAB    &kp Q  &kp W  &kp E           &kp R           &kp T                            &tog 7          &kp Y        &kp U          &kp I      &kp O    &kp P     &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D           &kp F           &kp G                    &tog 6  &to 0   &tog 3  &kp H        &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
+&td0       &kp Z  &kp X  &kp C           &kp V           &kp B      &kp C_MUTE            &tog 4          &kp N        &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                         &lt 3 LEFT_WIN  &kp LEFT_SHIFT  &lt 1 RET                                        &lt 2 SPACE  &kp RIGHT_ALT  &lt 4 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -94,10 +94,10 @@
 
         Navigation {
             bindings = <
-&kp LA(TAB)     &none               &none  &none  &none  &none                   &none                      &kp HOME        &kp PAGE_UP    &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK  &kp BACKSPACE
-&kp LCTRL       &kp LC(LEFT_SHIFT)  &none  &none  &none  &none            &none  &to 0               &none  &kp LEFT_ARROW  &kp DOWN       &kp UP           &kp RIGHT       &none            &none
-&kp LEFT_SHIFT  &none               &none  &none  &none  &none  &trans           &kp LG(DOWN_ARROW)         &kp END         &kp PAGE_DOWN  &none            &none           &none            &none
-                                           &mo 3  &none  &none                                              &kp RSHIFT      &none          &kp DELETE
+&kp LA(TAB)     &none               &none  &none  &none  &none                   &none                      &kp HOME         &kp PAGE_UP    &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK  &kp BACKSPACE
+&kp LCTRL       &kp LC(LEFT_SHIFT)  &none  &none  &none  &none            &none  &to 0               &none  &kp LEFT_ARROW   &kp DOWN       &kp UP           &kp RIGHT       &none            &none
+&kp LEFT_SHIFT  &none               &none  &none  &none  &none  &trans           &kp LG(DOWN_ARROW)         &kp END          &kp PAGE_DOWN  &none            &none           &none            &none
+                                           &mo 3  &none  &none                                              &kp RIGHT_SHIFT  &none          &kp DELETE
             >;
 
             label = "NAV";
@@ -135,6 +135,17 @@
             >;
 
             label = "Game";
+        };
+
+        Read {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans                      &trans          &trans          &trans        &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &to 0               &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &kp LG(DOWN_ARROW)          &trans          &trans          &trans        &trans           &trans  &trans
+                        &trans  &trans  &trans                                                &kp ENTER       &kp SPACE       &trans
+            >;
+
+            label = "Read";
         };
     };
 
